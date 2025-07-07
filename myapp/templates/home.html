@@ -1,39 +1,74 @@
-{% extends 'master.html' %}
-{% load static %}
-{% block title %}Home{% endblock%}
+{% extends 'master.html' %} {% load static %} {% block title %}Home{% endblock%}
 {% block content%}
 <!-- Carousel -->
-<div id="demo" class="carousel slide mt-3" data-bs-ride="carousel">
-
+<div id="demo" class="carousel slide" data-bs-ride="carousel">
   <!-- Indicators/dots -->
   <div class="carousel-indicators">
-    <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+    <button
+      type="button"
+      data-bs-target="#demo"
+      data-bs-slide-to="0"
+      class="active"
+    ></button>
     <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+    <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
   </div>
-  
+
   <!-- The slideshow/carousel -->
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="{% static 'carousel1.jpg' %}" alt="" class="d-block" style="width:50%">
+      <img
+        src="{% static 'imgs/img7.jpg' %}"
+        alt=""
+        class="d-block w-100"
+        style="height: 400px; object-fit: cover;"
+      />
       <div class="carousel-caption">
         <h3>Sunday 2025</h3>
         <p>Hello wecome back</p>
       </div>
     </div>
     <div class="carousel-item">
-      <img src="{% static 'carousel2.jpg '%}" alt="" class="d-block" style="width:50%">
+      <img
+        src="{% static 'imgs/carousel2.jpg' %}"
+        alt=""
+        class="d-block w-100"
+        style="height: 400px; object-fit: cover;"
+      />
       <div class="carousel-caption">
         <h3>Church day 1</h3>
         <p>Thank you</p>
-      </div> 
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img
+        src="{% static 'imgs/carousel3.jpg' %}"
+        alt=""
+        class="d-block w-100"
+        style="height: 400px; object-fit: cover;"
+      />
+      <div class="carousel-caption">
+        <h3>Sunday 2025</h3>
+        <p>Hello wecome back</p>
+      </div>
     </div>
   </div>
-  
+
   <!-- Left and right controls/icons -->
-  <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+  <button
+    class="carousel-control-prev"
+    type="button"
+    data-bs-target="#demo"
+    data-bs-slide="prev"
+  >
     <span class="carousel-control-prev-icon"></span>
   </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+  <button
+    class="carousel-control-next"
+    type="button"
+    data-bs-target="#demo"
+    data-bs-slide="next"
+  >
     <span class="carousel-control-next-icon"></span>
   </button>
 </div>
@@ -41,8 +76,14 @@
 <div class="container welcome-message">
   <div class="row">
     <div class="col-md-12">
-      <h1 class="text-center">Welcome to Light Church</h1>
-      <p class="text-center">We're so glad you're here! Light Church is a place of hope, healing, and growth—a family where everyone is welcomed, loved, and encouraged to shine with purpose. Whether you're joining us for the first time or looking for a deeper connection with God, you belong here. Let's walk this journey of faith together.</p>
+      <h1 class="text-center mt-3">Welcome to Light Church</h1>
+      <p class="text-center">
+        We're so glad you're here! Light Church is a place of hope, healing, and
+        growth—a family where everyone is welcomed, loved, and encouraged to
+        shine with purpose. Whether you're joining us for the first time or
+        looking for a deeper connection with God, you belong here. Let's walk
+        this journey of faith together.
+      </p>
       <a class="btn btn-secondary" href="#">More about Light</a>
     </div>
   </div>
@@ -51,63 +92,118 @@
 <!--Services-->
 <div class="container">
   <div class="row">
-    <div class="col-md-4">
-      </div class="card">
-        <div class="card-title"></div>
-        <div class="card-body"></div>
+    <div class="col-md-4 mt-3">
+      <div class="card mt-2">
+        <div class="card-title">
+          <span><b>SUNDAYS</b></span>
+        </div>
+        <hr>
+        <div class="card-body">
+          <div>
+            <span><i>First Service</i></span>
+            <h6><b>8:30 - 10:00am</b></h6>
+          </div>
+          <div>
+            <span><i>Second Service</i></span>
+            <h6><b>11:00 - 12:30am</b></h6>
+          </div>
+          <div>
+            <span><i>Sunday School</i></span>
+            <h6><b>8:30 - 10:00am</b></h6>
+            <h6><b>11:00 - 12:30am</b></h6>
+          </div>
+          <div>
+            <span><i>Youth Service</i></span>
+            <h6><b>14:00 - 11:30am</b></h6>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="col-md-4"></div>
-    <div class="col-md-4"></div>
+    <div class="col-md-4 mt-3">
+      <div class="card mt-2">
+        <div class="card-title">
+          <span><b>WEDNESDAYS</b></span>
+        </div>
+        <hr>
+        <div class="card-body">
+          <div>
+            <span><i>Wednesdays</i></span>
+            <h6><b>6:30 - 19:00pm</b></h6>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 mt-3">
+      <div class="card mt-2">
+        <div class="card-title">
+          <span><b>FRIDAYS</b></span>
+        </div>
+        <hr>
+        <div class="card-body">
+          <div>
+            <span><i>Youth Bible Study</i></span>
+            <h6><b>4:00 - 6:00pm</b></h6>
+          </div>
+          <div>
+            <span><i>Vespass</i></span>
+            <h6><b>6:00 - 7:00am</b></h6>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 
 <!--What's new-->
 <div class="container">
-  <h3 class="text-center">What's New</h3>
+  <h3 class="text-center mt-4">What's New</h3>
   <div class="row">
     <div class="col-md-4">
-      <img src="{% static 'img1' %}" alt="">
+      <img src="{% static 'imgs/img1.jpg' %}" alt="" style="width: 100%" />
       <div class="new-event">
         <h5>Title</h5>
         <p>Asdfn asdfj sdfm asdhjfk hdjfk hajskd</p>
       </div>
-    </div> 
+      <a class="btn btn-secondary" href="#">Learn More</a>
+    </div>
     <div class="col-md-4">
-      <img src="{% static 'img2' %}" alt="">
+      <img src="{% static 'imgs/img2.jpg' %}" alt="" style="width: 100%" />
       <div class="new-event">
         <h5>Title</h5>
         <p>Asdfn asdfj sdfm asdhjfk hdjfk hajskd</p>
       </div>
-    </div> 
+      <a class="btn btn-secondary" href="#">Learn More</a>
+    </div>
     <div class="col-md-4">
-      <img src="" alt="">
+      <img src="{% static 'imgs/img4.jpg' %}" alt="" style="width: 100%" />
       <div class="new-event">
         <h5>Title</h5>
         <p>Asdfn asdfj sdfm asdhjfk hdjfk hajskd</p>
       </div>
-    </div> 
+      <a class="btn btn-secondary" href="#">Learn More</a>
+    </div>
   </div>
-  <a class="btn btn-secondary" href="#">Learn More</a>
+  
 </div>
 <!--Gallery-->
-<h3 class="text-center">Gallery</h3>
+<h3 class="text-center mt-4">Gallery</h3>
 <div class="container">
   <div class="row">
     <div class="col-md-3">
-      <img src="" alt="">
+      <img src="{% static 'imgs/img4.jpg' %}" alt="" style="width: 100%" />
     </div>
     <div class="col-md-3">
-      <img src="" alt="">
+      <img src="{% static 'imgs/img4.jpg' %}" alt="" style="width: 100%" />
     </div>
     <div class="col-md-3">
-      <img src="" alt="">
+      <img src="{% static 'imgs/img4.jpg' %}" alt="" style="width: 100%" />
     </div>
     <div class="col-md-3">
-      <img src="" alt="">
+      <img src="{% static 'imgs/img4.jpg' %}" alt="" style="width: 100%" />
     </div>
     <div class="col-md-3">
-      <img src="" alt="">
+      <img src="{% static 'imgs/img4.jpg' %}" alt="" style="width: 100%" />
     </div>
   </div>
 </div>
