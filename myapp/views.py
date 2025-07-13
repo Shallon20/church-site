@@ -4,3 +4,11 @@ from django.shortcuts import render
 
 def home(request):
   return render(request, 'home.html')
+
+def about(request):
+  return render(request, 'about.html')
+
+def ministries(request):
+  return render(request, 'ministries.html')
+def ministry(request):
+  return render(request, 'ministry.html')

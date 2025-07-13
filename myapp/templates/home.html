@@ -1,5 +1,7 @@
-{% extends 'master.html' %} {% load static %} {% block title %}Home{% endblock%}
-{% block content%}
+{% extends 'master.html' %} {% load static %} {% block title %}<title>
+  Home
+</title>
+{% endblock%} {% block content%}
 <!-- Carousel -->
 <div id="demo" class="carousel slide" data-bs-ride="carousel">
   <!-- Indicators/dots -->
@@ -21,7 +23,7 @@
         src="{% static 'imgs/img7.jpg' %}"
         alt=""
         class="d-block w-100"
-        style="height: 400px; object-fit: cover;"
+        style="height: 400px; object-fit: cover"
       />
       <div class="carousel-caption">
         <h3>Sunday 2025</h3>
@@ -33,7 +35,7 @@
         src="{% static 'imgs/carousel2.jpg' %}"
         alt=""
         class="d-block w-100"
-        style="height: 400px; object-fit: cover;"
+        style="height: 400px; object-fit: cover"
       />
       <div class="carousel-caption">
         <h3>Church day 1</h3>
@@ -45,7 +47,7 @@
         src="{% static 'imgs/carousel3.jpg' %}"
         alt=""
         class="d-block w-100"
-        style="height: 400px; object-fit: cover;"
+        style="height: 400px; object-fit: cover"
       />
       <div class="carousel-caption">
         <h3>Sunday 2025</h3>
@@ -72,6 +74,7 @@
     <span class="carousel-control-next-icon"></span>
   </button>
 </div>
+
 <!--Welcome Message-->
 <div class="container welcome-message">
   <div class="row">
@@ -94,11 +97,9 @@
   <div class="row">
     <div class="col-md-4 mt-3">
       <div class="card mt-2">
-        <div class="card-title">
-          <span><b>SUNDAYS</b></span>
-        </div>
-        <hr>
         <div class="card-body">
+          <span class="card-title"><b>SUNDAYS</b></span>
+          <hr />
           <div>
             <span><i>First Service</i></span>
             <h6><b>8:30 - 10:00am</b></h6>
@@ -121,26 +122,21 @@
     </div>
     <div class="col-md-4 mt-3">
       <div class="card mt-2">
-        <div class="card-title">
-          <span><b>WEDNESDAYS</b></span>
-        </div>
-        <hr>
         <div class="card-body">
+          <span class="card-title"><b>WEDNESDAYS</b></span>
+          <hr />
           <div>
             <span><i>Wednesdays</i></span>
             <h6><b>6:30 - 19:00pm</b></h6>
           </div>
-          
         </div>
       </div>
     </div>
     <div class="col-md-4 mt-3">
       <div class="card mt-2">
-        <div class="card-title">
-          <span><b>FRIDAYS</b></span>
-        </div>
-        <hr>
         <div class="card-body">
+          <span class="card-title"><b>FRIDAYS</b></span>
+          <hr />
           <div>
             <span><i>Youth Bible Study</i></span>
             <h6><b>4:00 - 6:00pm</b></h6>
@@ -163,6 +159,7 @@
       <img src="{% static 'imgs/img1.jpg' %}" alt="" style="width: 100%" />
       <div class="new-event">
         <h5>Title</h5>
+        <span><i class="far fa-clock text-dark"></i> July 22, 2025</span>
         <p>Asdfn asdfj sdfm asdhjfk hdjfk hajskd</p>
       </div>
       <a class="btn btn-secondary" href="#">Learn More</a>
@@ -171,6 +168,7 @@
       <img src="{% static 'imgs/img2.jpg' %}" alt="" style="width: 100%" />
       <div class="new-event">
         <h5>Title</h5>
+        <span><i class="far fa-clock text-dark"></i> July 22, 2025</span>
         <p>Asdfn asdfj sdfm asdhjfk hdjfk hajskd</p>
       </div>
       <a class="btn btn-secondary" href="#">Learn More</a>
@@ -179,12 +177,21 @@
       <img src="{% static 'imgs/img4.jpg' %}" alt="" style="width: 100%" />
       <div class="new-event">
         <h5>Title</h5>
+        <span><i class="far fa-clock text-dark"></i> July 22, 2025</span>
+        <p>Asdfn asdfj sdfm asdhjfk hdjfk hajskd</p>
+      </div>
+      <a class="btn btn-secondary" href="#">Learn More</a>
+    </div>
+    <div class="col-md-4">
+      <img src="{% static 'imgs/img1.jpg' %}" alt="" style="width: 100%" />
+      <div class="new-event">
+        <h5>Title</h5>
+        <span><i class="far fa-clock text-dark"></i> July 22, 2025</span>
         <p>Asdfn asdfj sdfm asdhjfk hdjfk hajskd</p>
       </div>
       <a class="btn btn-secondary" href="#">Learn More</a>
     </div>
   </div>
-  
 </div>
 <!--Gallery-->
 <h3 class="text-center mt-4">Gallery</h3>
@@ -194,16 +201,16 @@
       <img src="{% static 'imgs/img4.jpg' %}" alt="" style="width: 100%" />
     </div>
     <div class="col-md-3">
-      <img src="{% static 'imgs/img4.jpg' %}" alt="" style="width: 100%" />
+      <img src="{% static 'imgs/img1.jpg' %}" alt="" style="width: 100%" />
     </div>
     <div class="col-md-3">
-      <img src="{% static 'imgs/img4.jpg' %}" alt="" style="width: 100%" />
+      <img src="{% static 'imgs/img6.jpg' %}" alt="" style="width: 100%" />
     </div>
     <div class="col-md-3">
-      <img src="{% static 'imgs/img4.jpg' %}" alt="" style="width: 100%" />
+      <img src="{% static 'imgs/img7.jpg' %}" alt="" style="width: 100%" />
     </div>
     <div class="col-md-3">
-      <img src="{% static 'imgs/img4.jpg' %}" alt="" style="width: 100%" />
+      <img src="{% static 'imgs/img2.jpg' %}" alt="" style="width: 100%" />
     </div>
   </div>
 </div>
