@@ -1,79 +1,35 @@
 {% extends 'master.html' %} {% load static %} {% block title %}<title>
   Home
 </title>
-{% endblock%} {% block content%}
-<!-- Carousel -->
-<div id="demo" class="carousel slide" data-bs-ride="carousel">
-  <!-- Indicators/dots -->
-  <div class="carousel-indicators">
-    <button
-      type="button"
-      data-bs-target="#demo"
-      data-bs-slide-to="0"
-      class="active"
-    ></button>
-    <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
-    <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
-  </div>
+{% endblock%} {% block content%} {% include 'header.html' %}
 
-  <!-- The slideshow/carousel -->
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img
-        src="{% static 'imgs/img7.jpg' %}"
-        alt=""
-        class="d-block w-100"
-        style="height: 400px; object-fit: cover"
-      />
-      <div class="carousel-caption">
-        <h3>Sunday 2025</h3>
-        <p>Hello wecome back</p>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <img
-        src="{% static 'imgs/carousel2.jpg' %}"
-        alt=""
-        class="d-block w-100"
-        style="height: 400px; object-fit: cover"
-      />
-      <div class="carousel-caption">
-        <h3>Church day 1</h3>
-        <p>Thank you</p>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <img
-        src="{% static 'imgs/carousel3.jpg' %}"
-        alt=""
-        class="d-block w-100"
-        style="height: 400px; object-fit: cover"
-      />
-      <div class="carousel-caption">
-        <h3>Sunday 2025</h3>
-        <p>Hello wecome back</p>
+<section class="hero-section position-relative">
+  <video
+    autoplay
+    muted
+    loop
+    playsinline
+    class="w-100"
+    style="object-fit: cover; height: 100vh"
+  >
+    <source src="{% static 'videos/header.mp4' %}" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+
+  <div
+    class="overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center text-white text-center"
+    style="background: rgba(0, 0, 0, 0.5)"
+  >
+    <div class="container">
+      <h1 class="display-4 fw-bold">Building Legacies of Faith.</h1>
+      <p class="lead">Welcome to Light Church</p>
+      <div class="mt-4">
+        <a href="#" class="btn btn-outline-light btn-lg me-3">Plan A Visit</a>
+        <a href="#" class="btn btn-outline-light btn-lg">Get Connected →</a>
       </div>
     </div>
   </div>
-
-  <!-- Left and right controls/icons -->
-  <button
-    class="carousel-control-prev"
-    type="button"
-    data-bs-target="#demo"
-    data-bs-slide="prev"
-  >
-    <span class="carousel-control-prev-icon"></span>
-  </button>
-  <button
-    class="carousel-control-next"
-    type="button"
-    data-bs-target="#demo"
-    data-bs-slide="next"
-  >
-    <span class="carousel-control-next-icon"></span>
-  </button>
-</div>
+</section>
 
 <!--Welcome Message-->
 <div class="container welcome-message">
@@ -193,25 +149,27 @@
     </div>
   </div>
 </div>
-<!--Gallery-->
-<h3 class="text-center mt-4">Gallery</h3>
-<div class="container">
-  <div class="row">
-    <div class="col-md-3">
-      <img src="{% static 'imgs/img4.jpg' %}" alt="" style="width: 100%" />
-    </div>
-    <div class="col-md-3">
-      <img src="{% static 'imgs/img1.jpg' %}" alt="" style="width: 100%" />
-    </div>
-    <div class="col-md-3">
-      <img src="{% static 'imgs/img6.jpg' %}" alt="" style="width: 100%" />
-    </div>
-    <div class="col-md-3">
-      <img src="{% static 'imgs/img7.jpg' %}" alt="" style="width: 100%" />
-    </div>
-    <div class="col-md-3">
-      <img src="{% static 'imgs/img2.jpg' %}" alt="" style="width: 100%" />
+
+<section class="py-5 bg-black text-white mt-3">
+  <div class="container-fluid">
+    <h2 class="fw-bold text-center mb-4">A Glimpse of Our Church Life</h2>
+    <p class="text-center mb-5">
+      From joyful worship to genuine community, here's a look at how we do life
+      together.
+    </p>
+    <div class="auto-scroll-wrapper">
+      <div class="auto-scroll-track">
+        <img src="{% static 'imgs/img1.jpg' %}" />
+        <img src="{% static 'imgs/img2.jpg' %}" />
+        <img src="{% static 'imgs/img7.jpg' %}" />
+        <img src="{% static 'imgs/img4.jpg' %}" />
+        <img src="{% static 'imgs/img5.jpg' %}" />
+      </div>
     </div>
   </div>
-</div>
+</section>
+<script>
+  var copy = document.querySelector(".auto-scroll-track").cloneNode(true);
+  document.querySelector(".auto-scroll-wrapper").appendChild(copy);
+</script>
 {% endblock %}

@@ -12,3 +12,7 @@ def ministries(request):
   return render(request, 'ministries.html')
 def ministry(request):
   return render(request, 'ministry.html')
+def contact(request):
+  return render(request, 'contact.html')
+def give(request):
+  return render(request, 'give.html')

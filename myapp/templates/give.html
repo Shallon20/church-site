@@ -1,0 +1,72 @@
+{% extends 'master.html' %} {% load static %} {% block title %}
+<title>Give</title>
+{% endblock %} {% block content %}
+
+<!-- Hero Section -->
+<section class="hero-section position-relative">
+  <img
+    src="{% static 'imgs/img1.jpg' %}"
+    alt="Give Hero"
+    class="w-100 vh-100 object-fit-cover"
+  />
+
+  <div
+    class="hero-overlay position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-center align-items-center text-center text-white px-3"
+    style="background: rgba(0, 0, 0, 0.5)"
+  >
+    <h1 class="display-4 fw-bold">Thank you for Giving</h1>
+    <p class="lead mb-4">We couldn’t do it without you.</p>
+    <a href="#ways-to-give" class="btn btn-outline-light btn-lg">Give Online</a>
+  </div>
+</section>
+
+<!-- Top Message Section -->
+<section class="py-5 bg-dark text-white text-center">
+  <div class="container">
+    <p class="lead mb-0">
+      Because of your generous giving, Light Church is reaching our community
+      and beyond with hope and help.
+    </p>
+  </div>
+</section>
+
+<div class="wave-divider">
+  <svg
+    viewBox="0 0 1440 320"
+    preserveAspectRatio="none"
+    style="display: block; width: 100%; height: 120px"
+  >
+    <path
+      fill="#212529"
+      d="M0,224 C480,320 960,128 1440,224 L1440,0 L0,0 Z"
+    ></path>
+  </svg>
+</div>
+
+<!-- Ways to Give Section -->
+<section id="ways-to-give" class="py-5 bg-white text-dark">
+  <div class="container">
+    <h2 class="text-center fw-bold mb-4">
+      Transforming Lives Through Generosity
+    </h2>
+    <p class="text-center mb-5">
+      Because of your generous giving, Light Church is reaching our community
+      and beyond with hope and help.
+    </p>
+
+    <div class="row g-4 justify-content-center">
+      <div class="col-md-6 text-center">
+        <h5>Give Online</h5>
+        <p>Secure and easy one-time or recurring gifts.</p>
+        <a class="btn btn-secondary" href="#">Give Here</a>
+      </div>
+      <div class="col-md-6 text-center">
+        <h5>In Person</h5>
+        <p>During all weekend services.</p>
+        <p><small>Address: Kilimani, Nairobi, KE</small></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

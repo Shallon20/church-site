@@ -1,0 +1,91 @@
+{% extends 'master.html' %} {% load static %} {% block title %}Contact Us{%
+endblock %} {% block content %}
+
+<div class="container my-5">
+  <div class="row text-center">
+    <h2 class="fw-bold">GET IN TOUCH</h2>
+    <p>
+      We’d love to hear from you. Please use the details or form below to
+      connect with us.
+    </p>
+  </div>
+
+  <div class="row mt-5">
+    <!-- Left Section: Info -->
+    <div class="col-md-6">
+      <h4 class="fw-bold">LIGHT CHURCH</h4>
+      <p><strong>Office Hours:</strong> Tue - Fri | 8:00 AM – 4:00 PM</p>
+      <p><strong>Address:</strong> P.O. Box 12345 – 00100 Nairobi, Kenya</p>
+      <p><strong>Phone:</strong> +254-712-345678, +254-733-123456</p>
+      <p>
+        <strong>Email:</strong>
+        <a href="mailto:info@lightchurch.org">info@lightchurch.org</a>
+      </p>
+    </div>
+
+    <!-- Right Section: Form -->
+    <div class="col-md-6">
+      <h4 class="fw-bold">SEND US AN EMAIL</h4>
+      <form>
+        <div class="row mb-3">
+          <div class="col">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="First Name"
+              required
+            />
+          </div>
+          <div class="col">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Last Name"
+              required
+            />
+          </div>
+        </div>
+        <div class="mb-3">
+          <input
+            type="email"
+            class="form-control"
+            placeholder="Email Address"
+            required
+          />
+        </div>
+        <div class="row mb-3">
+          <div class="col">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Area of Residence"
+              required
+            />
+          </div>
+          <div class="col">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Phone Number"
+            />
+          </div>
+        </div>
+        <div class="mb-3">
+          <textarea
+            class="form-control"
+            rows="4"
+            placeholder="Your Message"
+            required
+          ></textarea>
+        </div>
+        <div class="mb-3">
+          <button type="submit" class="btn btn-primary w-100">
+            Send Message
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

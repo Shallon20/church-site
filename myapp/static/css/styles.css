@@ -1,3 +1,73 @@
-.bg-church-blue {
-  background-color: #0d1b2a;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box  ;
 }
+body {
+  overflow-x: hidden;
+}
+
+
+.bg-church-blue {
+  background-color: rgb(3, 9, 27);
+}
+.hero-section h1, .hero-section p {
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+}
+
+.hero-section {
+  position: relative;
+  z-index: 1;
+}
+
+.navbar {
+  z-index: 1000;
+}
+
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+.auto-scroll-wrapper {
+  overflow: hidden;
+  padding: 60px 0;
+  white-space: nowrap;
+  position: relative;
+  
+}
+.auto-scroll-wrapper:hover auto-scroll-track{
+  animation-play-state: paused;
+}
+.auto-scroll-track {
+  display: inline-block;
+  animation: 35s slide infinite linear;
+
+}
+.auto-scroll-wrapper::before, .auto-scroll-wrapper::after{
+  position: absolute;
+  top: 0;
+  width: 250px;
+  height: 100%;
+  content: "";
+  z-index: 2;
+}
+.auto-scroll-wrapper::before{
+  background: linear-gradient(to left, rgba(0, 0, 0, 0), black);
+  left: 0;
+}
+.auto-scroll-wrapper::after{
+  background: linear-gradient(to right, rgba(0, 0, 0, 0), black);
+  right: 0;
+}
+.auto-scroll-track img {
+  
+  height: 250px;
+  margin: 0 20px;
+  
+}
+
